@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=PT+Serif&display=swap');
+
+
+.btnLink{
+    text-decoration-line: none;
+    color: whitesmoke;
+    font-size: 1.1rem;
+}
+
+.btnContsiner{
+    margin-left: 50px;
+    display: flex;
+}
+
+.pageTitle{
+    color: greenyellow;
+    font-size: 1.5rem;
+    padding-top: 12px;
+    font-family: 'Barriecito', cursive;
+}
+
+.linkNav{
+    font-family: 'PT Serif', serif;
+    font-size: 1.2rem;
+}
+
+.sub-container{
+    display: flex;
+}
+
+p{
+    color: palevioletred;
+}
+
+.navImage{
+    height: 70px;
+}

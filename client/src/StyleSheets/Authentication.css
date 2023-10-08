@@ -1,0 +1,45 @@
+.authContainer{
+    width: 350px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background-color: pink;
+    border-radius: 20px;
+}
+
+.authMainContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*code to change the opacity of background image*/
+.authMainContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../Images/AuthBG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1; /* Adjust the opacity value as needed (0 to 1) */
+    z-index: -1; /* Place the overlay below other content */
+}
+
+
+@media (max-width:576px){
+    .Container{
+        width: 250px;
+        padding: 1rem;
+
+    }
+}
+
+@media (max-width:274px){
+    .Container{
+        width: 100%;
+    }
+}

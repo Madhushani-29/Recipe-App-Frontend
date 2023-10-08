@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+.saveRecipeContainer{
+    width: 500px;
+    margin: 4rem auto;
+    background-color: palevioletred;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 500px;
+    border: 0.05rem solid black;
+    border-radius: 10px;
+}
+/*when convert this to many in same line, make main div display flex and overflow none. then send data to next compontnt*/
+.saveRecipeMainContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FFC7EA;
+    font-family: 'Merriweather', serif;
+}
+
+/*code to change the opacity of background image*/
+.saveRecipeMainContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   /* background-image: url("../Images/AuthenticationBg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1; *//* Adjust the opacity value as needed (0 to 1) */
+    /*z-index: -1;*/ /* Place the overlay below other content */
+}
+
+.saveRecipeMainCard{
+    position: relative;
+    overflow-y:hidden ;
+    width: 100%;
+    height: 100%;
+}
+
+.cardText{
+    color: black;
+}
+
+.viewMoreImage{
+    height: 30px;
+}
+
+.viewMoreDiv{
+    margin-top: 190px;
+    margin-left: 255px;
+    position: absolute;
+    z-index: 2;
+}
+
+.removeFavouriteDiv{
+    margin-top: 10px;
+    margin-left: 450px;
+    position: absolute;
+    z-index: 2;
+}
+
+.removeFavouriteImage{
+    height: 30px;
+}
+
+.removeFavouriteImage:hover{
+    transform: scale(1.2)
+}

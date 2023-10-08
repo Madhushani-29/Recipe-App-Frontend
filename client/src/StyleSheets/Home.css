@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+.homeContainer{
+    width: 300px;
+    margin: 4rem auto;
+    background-color: palevioletred;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 500px;
+    border: 0.05rem solid black;
+    border-radius: 10px;
+}
+/*when convert this to many in same line, make main div display flex and overflow none. then send data to next compontnt*/
+.homeMainContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fde4f2;
+    font-family: 'Merriweather', serif;
+}
+
+/*code to change the opacity of background image*/
+.homeMainContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+   /* background-image: url("../Images/AuthenticationBg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1; *//* Adjust the opacity value as needed (0 to 1) */
+    /*z-index: -1;*/ /* Place the overlay below other content */
+}
+
+.mainCard{
+    position: relative;
+    overflow-y:hidden ;
+    width: 100%;
+    height: 100%;
+}
+
+.cardText{
+    color: black;
+}
+
+.viewMoreImage{
+    height: 30px;
+}
+
+.viewMoreDiv{
+    margin-top: 190px;
+    margin-left: 255px;
+    position: absolute;
+    z-index: 2;
+}
+
+.addFavouriteDiv{
+    margin-top: 10px;
+    margin-left: 255px;
+    position: absolute;
+    z-index: 2;
+}
+
+.addFavouriteImage{
+    height: 30px;
+}
+
+.addFavouriteImage:hover{
+    transform: scale(1.2)
+}
