@@ -27,6 +27,7 @@ const Authentication=()=>{
 export {Authentication};
 
 const Login=()=>{
+    const BASE_URL = 'http://localhost:3000';
     const [userLoginData, setUserLoginData]=useState({email:"", password:""});
     const getUserLoginData =(event)=>{
         const {name, value}=event.target;
@@ -49,7 +50,7 @@ const Login=()=>{
         }
         try{
             //get the response
-            const response=await axios.post("http://localhost:5001/users/login", {email:userLoginData.email, password:userLoginData.password});
+            const response=await axios.post(`${BASE_URL}/users/login`, {email:userLoginData.email, password:userLoginData.password});
             //add expire time
             const expirationDate = new Date();
             expirationDate.setHours(expirationDate.getHours() + 1);
@@ -69,10 +70,13 @@ const Login=()=>{
 }
 
 const Register=()=>{
+    const BASE_URL = 'http://localhost:3000';
+    console.log(BASE_URL)
     const [userRegisterData, setUserRegisterData]=useState({email:"", password:""});
     const getUserRegisterData =(event)=>{
         const {name, value}=event.target;
         setUserRegisterData(prevState=>({...prevState, [name]:value}));
+        console.log(BASE_URL);
     }
 
     const submitData=async (event)=>{
@@ -83,7 +87,7 @@ const Register=()=>{
         }
         try{
             event.preventDefault();
-            await axios.post("http://localhost:5001/users/register", {email:userRegisterData.email, password:userRegisterData.password});
+            await axios.post(`${BASE_URL}/users/register`, {email:userRegisterData.email, password:userRegisterData.password});
 
             window.alert("User Registered Successfully !");
         }

@@ -9,9 +9,11 @@ import Favourite from "../Images/Favourite.png";
 import {useCookies}  from "react-cookie";
 
 const Home=()=>{
+    const BASE_URL = 'http://localhost:3000';
+
     const [data, setData]=useState([]);
     useEffect(() => {
-        axios.get('http://localhost:5001/recipe')
+        axios.get(`${BASE_URL}/recipe`)
         .then(response => {
             const recipies=response.data;
             setData(recipies);
@@ -35,7 +37,7 @@ const Home=()=>{
     //use to avoid duplicate favourites
     useEffect(()=>{
         const userID=localStorage.getItem("User_ID");
-        axios.get(`http://localhost:5001/recipe/recipe-ids-saved/${userID}`)
+        axios.get(`${BASE_URL}/recipe/recipe-ids-saved/${userID}`)
         .then(response=>{
             setCurrentSaved(response.data.savedRecipeIDs);
         })
@@ -60,7 +62,7 @@ const Home=()=>{
             return;
         }
         else{
-            axios.put("http://localhost:5001/recipe", {userID, recipeID})
+            axios.put(`${BASE_URL}/recipe`, {userID, recipeID})
             .then(response=>{
                 window.alert("Added to favourites.");
                 //add the new item to the array

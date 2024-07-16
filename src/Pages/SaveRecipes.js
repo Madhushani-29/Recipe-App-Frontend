@@ -9,10 +9,11 @@ import "../StyleSheets/SaveRecipe.css";
 
 const SaveRecipes = () => {
     const [savedRecipies, setsavedRecipies] = useState([]);
+    const BASE_URL = 'http://localhost:3000';
 
     useEffect(() => {
         const id = localStorage.getItem("User_ID");
-        axios.get(`http://localhost:5001/recipe/recipes-saved/${id}`)
+        axios.get(`${BASE_URL}/recipe/recipes-saved/${id}`)
             .then(response => {
                 const recipeList = response.data.savedRecipes;
                 setsavedRecipies(recipeList);
@@ -33,7 +34,7 @@ const SaveRecipes = () => {
         const recipeID=recipe._id;
         console.log(userID);
         console.log(recipeID);
-        axios.put("http://localhost:5001/recipe/recipes-saved", {userID, recipeID})
+        axios.put(`${BASE_URL}/recipe/recipes-saved`, {userID, recipeID})
         .then(response=>{
             window.alert("Remove from favourites.");
         })

@@ -6,6 +6,7 @@ import axios from "axios";
 import {useCookies} from "react-cookie";
 
 const CreateRecipes=()=>{
+    const BASE_URL = 'http://localhost:3000';
 
     const [recipe, setRecipe]=useState({
         name:"", 
@@ -44,7 +45,7 @@ const CreateRecipes=()=>{
         
         try{
             console.log(recipe);
-            await axios.post("http://localhost:5001/recipe", recipe);
+            await axios.post(`${BASE_URL}/recipe`, recipe);
             window.alert("New recipe added.");
 
             //when submit data, all fields clear
