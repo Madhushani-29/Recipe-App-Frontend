@@ -9,7 +9,7 @@ import "../StyleSheets/SaveRecipe.css";
 
 const SaveRecipes = () => {
     const [savedRecipies, setsavedRecipies] = useState([]);
-    const BASE_URL = 'http://localhost:3000';
+    const BASE_URL = 'https://recipe-app-backend-7ud4rzi25-madhushanis-projects.vercel.app';
 
     useEffect(() => {
         const id = localStorage.getItem("User_ID");

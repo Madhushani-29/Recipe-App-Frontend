@@ -9,7 +9,7 @@ import Favourite from "../Images/Favourite.png";
 import {useCookies}  from "react-cookie";
 
 const Home=()=>{
-    const BASE_URL = 'http://localhost:3000';
+    const BASE_URL = 'https://recipe-app-backend-7ud4rzi25-madhushanis-projects.vercel.app';
 
     const [data, setData]=useState([]);
     useEffect(() => {

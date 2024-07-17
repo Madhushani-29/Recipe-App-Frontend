@@ -27,7 +27,7 @@ const Authentication=()=>{
 export {Authentication};
 
 const Login=()=>{
-    const BASE_URL = 'http://localhost:3000';
+    const BASE_URL = 'https://recipe-app-backend-7ud4rzi25-madhushanis-projects.vercel.app';
     const [userLoginData, setUserLoginData]=useState({email:"", password:""});
     const getUserLoginData =(event)=>{
         const {name, value}=event.target;
@@ -70,13 +70,11 @@ const Login=()=>{
 }
 
 const Register=()=>{
-    const BASE_URL = 'http://localhost:3000';
-    console.log(BASE_URL)
+    const BASE_URL = 'https://recipe-app-backend-7ud4rzi25-madhushanis-projects.vercel.app';
     const [userRegisterData, setUserRegisterData]=useState({email:"", password:""});
     const getUserRegisterData =(event)=>{
         const {name, value}=event.target;
         setUserRegisterData(prevState=>({...prevState, [name]:value}));
-        console.log(BASE_URL);
     }
 
     const submitData=async (event)=>{
