@@ -6,7 +6,7 @@ import axios from "axios";
 import {useCookies} from "react-cookie";
 
 const CreateRecipes=()=>{
-    const BASE_URL = 'https://recipe-app-backend-7ud4rzi25-madhushanis-projects.vercel.app';
+    const BASE_URL = 'https://recipe-app-backend-one.vercel.app';
 
     const [recipe, setRecipe]=useState({
         name:"", 
