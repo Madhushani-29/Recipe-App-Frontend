@@ -21,6 +21,10 @@
     margin: 0;
     padding: 0;
     background-color: #fde4f2;
+    background-image: url("../Images/HomeBG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
     font-family: 'Merriweather', serif;
 }
 
